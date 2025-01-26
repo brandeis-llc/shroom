@@ -43,11 +43,6 @@ def generate_message(prompt_str: str):
 
 
 def gpt_res2file_v2(task_name: str):
-    task2prompt_mapping = {
-        "DM": general_pipeline_prompt,
-        "MT": general_pipeline_prompt,
-        "PG": general_pipeline_prompt,
-    }
     out_json_file = open(OUT_FILE_PATH.joinpath(f"out.jsonl"), "w")
 
     for ins in tqdm.tqdm(task_instances[task_name]):
